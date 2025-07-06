@@ -59,3 +59,5 @@ exp_react_01/
 ├── package.json         # プロジェクトの情報と依存関係
 └── vite.config.js       # Viteの設定ファイル
 ```
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/hideaki1979/exp_react_bgn?utm_source=oss&utm_medium=github&utm_campaign=hideaki1979%2Fexp_react_bgn&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)

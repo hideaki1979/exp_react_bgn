@@ -5,12 +5,12 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // カレンダーのcss
 
 const CalendarItem = () => {
-    const [value, setValue] = useState();
+    const [value, setValue] = useState(new Date());
 
     return (
         <div className={styles.calendar}>
             <Calendar value={value} onClickDay={(e) => setValue(e)} />
-            <div>{value}</div>
+            <div>{value?.toLocaleDateString()}</div>
         </div>
     );
 };
