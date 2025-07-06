@@ -10,7 +10,7 @@ const CalendarItem = () => {
     return (
         <div className={styles.calendar}>
             <Calendar value={value} onClickDay={(e) => setValue(e)} />
-            <div>{value.toLocaleDateString()}</div>
+            <div>{value?.toLocaleDateString()}</div>
         </div>
     );
 };
