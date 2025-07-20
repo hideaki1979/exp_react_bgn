@@ -26,7 +26,7 @@ const CustomerList = () => {
         // APIから情報を取得し、jsの形に変換する（json()というおまじないを使う）
         const fetchData = async () => {
             try {
-                setLoading(false);
+                setLoading(true);
                 setError(null)
                 const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
                 const res = await fetch(url);
