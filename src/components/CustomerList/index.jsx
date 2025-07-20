@@ -38,7 +38,7 @@ const CustomerList = () => {
 
                 if (json.values) {
                     const mapped = json.values
-                        .filter(row => row && row.length > 0 && !isNaN(Number(row[0])))
+                        .filter(row => row && row.length >= 5 && !isNaN(Number(row[0])))
                         .map(([id, area, date, tel, score]) => ({
                             id: Number(id),
                             area,
