@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 
 // こちらに記載します
 const SHEET_ID = import.meta.env.VITE_GOOGLE_SHEETS_SHEET_ID;
-const SHEET_NAME = import.meta.env.VITE_GOOGLE_SHEETS_SHEET_NAME || "test";;
+const SHEET_NAME = import.meta.env.VITE_GOOGLE_SHEETS_SHEET_NAME || "test";
 const API_KEY = import.meta.env.VITE_GOOGLE_SHEETS_API_KEY;
 
 const CustomerList = () => {
@@ -30,11 +30,11 @@ const CustomerList = () => {
                 setError(null)
                 const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
                 const res = await fetch(url);
-                const json = await res.json();
-
                 if (!res.ok) {
                     throw new Error(`HTTP error! status:${res.status}`);
                 }
+
+                const json = await res.json();
 
                 if (json.values) {
                     const mapped = json.values
